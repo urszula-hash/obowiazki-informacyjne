@@ -85,8 +85,8 @@ const CZESCI = [[1,11],[12,22],[23,33],[34,44]];
 
 /* ================== ZLICZANIE NA SALI (Google Forms) ==================
    Uzupełnić po uruchomieniu skryptu formularz_raporty.gs (linia KONFIGURACJA). */
-const FORM_URL = '';      // np. https://docs.google.com/forms/d/e/.../formResponse
-const FORM_ENTRIES = [];  // 44 pozycje: ['entry.111', 'entry.222', ...]
+const FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSe-bBc2R851tdxxzVcIvwdZpMnvlyzwySfoBw0YWmAAKZO7ew/formResponse';      // np. https://docs.google.com/forms/d/e/.../formResponse
+const FORM_ENTRIES = ['entry.1583259607', 'entry.1988931307', 'entry.354888456', 'entry.344383554', 'entry.115946191', 'entry.1874690310', 'entry.1274796494', 'entry.519409826', 'entry.1392960591', 'entry.147561734', 'entry.1714186803', 'entry.1141374752', 'entry.256638722', 'entry.87319340', 'entry.1325342003', 'entry.451354250', 'entry.442967941', 'entry.311217928', 'entry.24266598', 'entry.471903172', 'entry.1186306501', 'entry.382582853', 'entry.1627056679', 'entry.259548994', 'entry.424760739', 'entry.1152334452', 'entry.687725574', 'entry.683797894', 'entry.1009295638', 'entry.538813992', 'entry.1340981236', 'entry.1798669122', 'entry.1927765638', 'entry.779142212', 'entry.938329155', 'entry.1270398364', 'entry.738847973', 'entry.94867216', 'entry.1427512724', 'entry.1477098291', 'entry.675793338', 'entry.458065329', 'entry.1064115536', 'entry.223555419'];  // 44 pozycje: ['entry.111', 'entry.222', ...]
 function wyslij(n, odp){
   if(!FORM_URL || FORM_ENTRIES.length!==CASE.length) return;
   const klucz='raportyWyslane';
@@ -107,7 +107,7 @@ let OD=0, DO=CASE.length-1, wybor=[];
 const app = document.getElementById('app');
 const esc = t => String(t).replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 function render(html){ app.innerHTML='<div class="fade">'+html+'</div>'; window.scrollTo(0,0); }
-const DISC = '<p class="disc">Ćwiczenie na zajęcia z architektury rynku kapitałowego. Cel wyłącznie edukacyjny.<br>Wersja 1</p>';
+const DISC = '<p class="disc">Ćwiczenie na zajęcia z architektury rynku kapitałowego. Cel wyłącznie edukacyjny.<br>Wersja 2</p>';
 const kat = k => `<span class="k${k}" style="font-weight:600">${KAT[k]}</span>`;
 
 function dobrze(n){
